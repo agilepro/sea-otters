@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="goteam.css" rel="stylesheet" type="text/css">
+  <script src="js/angular.js"></script>
+  
+<script>
+function parsePageParams() {
+    var param = [];
+    var curPath = window.location.href;
+    var hashPos = curPath.indexOf("#/");
+    if (hashPos>0) {
+        var tail = curPath.substring(hashPos+2);
+        var elems = tail.split("/");
+        for(var i=0; i<elems.length; i++) {
+            var part = elems[i];
+            var equalsPos = part.indexOf("=");
+            if (equalsPos>0) {
+                var paramName = part.substring(0,equalsPos);
+                var paramVal = part.substring(equalsPos+1);
+                param[paramName]=decodeURIComponent(paramVal);
+            }
+        }
+    }
+    return param;
+}
+
+function setAddressBar(param) {
+    var curPath = window.location.toString();
+    var hashPos = curPath.indexOf("#");
+    var newAddr = "";
+    if (hashPos>0) {
+        newAddr = curPath.substring(0,hashPos+1);
+    }
+    else {
+        newAddr = curPath + "#";
+    }
+    for (var key in param) {
+        if (param.hasOwnProperty(key)) {
+            newAddr = newAddr + "/"+key+"="+window.encodeURIComponent(param[key]);
+        }
+    }
+    window.location = newAddr;
+}
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $scope.param = parsePageParams();
+    $scope.name = "test";
+    $scope.meet = {scores:[]};
+    $scope.possMap = {};
+    $scope.date = "";
+    $scope.opponent = "";
+    
+    $scope.filterStroke = "Back";
+    
+    $scope.getSwimmer = function(alias) {
+        $http.get("data/"+alias+".json")
+        .success(function(data) {
+            $scope.meet = data;
+            $scope.possMap = {};
+            $scope.date = data.scores[0].date;
+            $scope.opponent = data.scores[0].opponent;
+            data.scores.forEach( function(item) {
+                if (!$scope.possMap[item.stroke]) {
+                    $scope.possMap[item.stroke] = {};
+                }
+                var level3 = $scope.possMap[item.stroke];
+                if (!level3[item.age]) {
+                    level3[item.age] = {};
+                }
+                var level4 = level3[item.age];
+                level4[item.gender] = "ok";
+            });
+        });
+        
+    }
+    
+    $scope.findRows = function() {
+        var ret = [];
+        $scope.meet.scores.forEach( function(item) {
+            if (item.stroke == $scope.filterStroke) {
+                ret.push(item);
+            }
+        });
+        
+        ret.sort( function(a,b) {
+            return a.meet-b.meet;
+        });
+        return ret;
+    }
+    
+    if ($scope.param.n) {
+        $scope.alias = $scope.param.n;
+        $scope.getSwimmer($scope.param.n);
+    }
+    if ($scope.param.s) {
+        $scope.filterStroke = $scope.param.s;
+    }
+    
+    $scope.getAllStrokes = function() {
+        if ($scope.possMap) {
+            return Object.keys($scope.possMap);
+        }
+        return ["Medley Relay", "Back", "Breast", "Butterfly", "Freestyle", "Freestyle Relay"];
+    }
+    $scope.setStroke = function(s) {
+        $scope.filterStroke = s;
+    }
+
+    
+});
+</script>
+
+<style>
+.myTable {
+    margin:20px;
+}
+.myTable td {
+    padding-left:10px;
+    padding-right:10px;
+    background-color:white;
+    text-align: center;
+}
+body {
+    margin:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{alias}}</h1>
+
+<div>
+<span ng-repeat="stroke in getAllStrokes()">
+<button class="btn btn-default" ng-click="setStroke(stroke)">
+    <span class="glyphicon glyphicon-check" ng-show="filterStroke==stroke"></span> 
+    <span class="glyphicon glyphicon-unchecked" ng-hide="filterStroke==stroke"></span> {{stroke}}</button>
+</span>
+
+</div>
+
+
+  <h1>{{filterStroke}} </h1>
+  
+<table class="myTable">
+<tr><td>Place</td>
+    <td>Name</td>
+    <td>Time</td>
+    <td>Date</td>
+    <td>Event</td>
+</tr>
+
+<tr ng-repeat="rec in findRows()">
+<td>{{rec.place}}</td>
+<td>{{rec.name}}</td>
+<td>{{rec.time}}</td>
+<td><a href="meet.htm#/m={{rec.meet}}/s={{rec.stroke}}/a={{rec.age}}/g={{rec.gender}}">{{rec.date}}</a></td>
+<td>{{rec.opponent}}</td>
+</tr>
+</table>
+</div>
+
+
+</body>
+</html>

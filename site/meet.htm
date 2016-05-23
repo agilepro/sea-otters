@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="goteam.css" rel="stylesheet" type="text/css">
+  <script src="js/angular.js"></script>
+  
+<script>
+function parsePageParams() {
+    var param = [];
+    var curPath = window.location.href;
+    var hashPos = curPath.indexOf("#/");
+    if (hashPos>0) {
+        var tail = curPath.substring(hashPos+2);
+        var elems = tail.split("/");
+        for(var i=0; i<elems.length; i++) {
+            var part = elems[i];
+            var equalsPos = part.indexOf("=");
+            if (equalsPos>0) {
+                var paramName = part.substring(0,equalsPos);
+                var paramVal = part.substring(equalsPos+1);
+                param[paramName]=decodeURIComponent(paramVal);
+            }
+        }
+    }
+    return param;
+}
+
+function setAddressBar(param) {
+    var curPath = window.location.toString();
+    var hashPos = curPath.indexOf("#");
+    var newAddr = "";
+    if (hashPos>0) {
+        newAddr = curPath.substring(0,hashPos+1);
+    }
+    else {
+        newAddr = curPath + "#";
+    }
+    for (var key in param) {
+        if (param.hasOwnProperty(key)) {
+            newAddr = newAddr + "/"+key+"="+window.encodeURIComponent(param[key]);
+        }
+    }
+    window.location = newAddr;
+}
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $scope.param = parsePageParams();
+    $scope.name = "test";
+    $scope.meet = {scores:[]};
+    $scope.possMap = {};
+    $scope.date = "";
+    $scope.opponent = "";
+    
+    $scope.filterGender = "Boys";
+    $scope.filterAge = "9-10";
+    $scope.filterStroke = "Back";
+    
+    $scope.getMeet = function(meedId) {
+        $http.get("data/meet"+meedId+".json")
+        .success(function(data) {
+            $scope.meet = data;
+            $scope.possMap = {};
+            $scope.date = data.scores[0].date;
+            $scope.opponent = data.scores[0].opponent;
+            data.scores.forEach( function(item) {
+                if (!$scope.possMap[item.stroke]) {
+                    $scope.possMap[item.stroke] = {};
+                }
+                var level3 = $scope.possMap[item.stroke];
+                if (!level3[item.age]) {
+                    level3[item.age] = {};
+                }
+                var level4 = level3[item.age];
+                level4[item.gender] = "ok";
+            });
+        });
+        
+    }
+    
+    $scope.findRows = function() {
+        var ret = [];
+        $scope.meet.scores.forEach( function(item) {
+            if (item.gender == $scope.filterGender &&
+                item.age == $scope.filterAge &&
+                item.stroke == $scope.filterStroke) {
+                ret.push(item);
+            }
+        });
+        
+        ret.sort( function(a,b) {
+            if (b.place=="--") {
+                return -1
+            }
+            if (a.place=="--") {
+                return 1
+            }
+            return a.place-b.place;
+        });
+        return ret;
+    }
+    
+    if ($scope.param.m) {
+        $scope.getMeet($scope.param.m);
+    }
+    if ($scope.param.g) {
+        $scope.filterGender = $scope.param.g;
+    }
+    if ($scope.param.a) {
+        $scope.filterAge = $scope.param.a;
+    }
+    if ($scope.param.s) {
+        $scope.filterStroke = $scope.param.s;
+    }
+
+    $scope.getAllStrokes = function() {
+        return ["Medley Relay", "Back", "Breast", "Butterfly", "Freestyle", "Freestyle Relay"];
+    }
+    $scope.setStroke = function(s) {
+        $scope.filterStroke = s;
+        var possAge = $scope.possMap[s];
+        if (!possAge[$scope.filterAge]) {
+            $scope.filterAge = Object.keys(possAge)[0];
+        }
+        var possGender = possAge[$scope.filterAge]
+        if (!possGender[$scope.filterGender]) {
+            $scope.filterGender = Object.keys(possGender)[0];
+        }
+    }
+    $scope.getAllAges = function() {
+        if ($scope.possMap[$scope.filterStroke]) {
+            return Object.keys($scope.possMap[$scope.filterStroke]);
+        }
+        return [];
+    }
+    $scope.setAge = function(s) {
+        $scope.filterAge = s;
+        var possAge = $scope.possMap[$scope.filterStroke];
+        if (!possAge[$scope.filterAge]) {
+            $scope.filterAge = Object.keys(possAge)[0];
+        }
+        var possGender = possAge[$scope.filterAge]
+        if (!possGender[$scope.filterGender]) {
+            $scope.filterGender = Object.keys(possGender)[0];
+        }
+    }
+    $scope.getAllGenders = function() {
+        if ($scope.possMap[$scope.filterStroke]) {
+            if ($scope.possMap[$scope.filterStroke][$scope.filterAge]) {
+                return Object.keys($scope.possMap[$scope.filterStroke][$scope.filterAge]);
+            }
+        }
+        return [];
+    }
+    $scope.setGender = function(s) {
+        $scope.filterGender = s;
+    }
+    
+});
+</script>
+
+<style>
+.myTable {
+    margin:20px;
+}
+.myTable td {
+    padding-left:10px;
+    padding-right:10px;
+    background-color:white;
+    text-align: center;
+}
+body {
+    margin:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1>{{date}} {{opponent}}</h1>
+
+<div>
+<span ng-repeat="stroke in getAllStrokes()">
+<button class="btn btn-default" ng-click="setStroke(stroke)">
+    <span class="glyphicon glyphicon-check" ng-show="filterStroke==stroke"></span> 
+    <span class="glyphicon glyphicon-unchecked" ng-hide="filterStroke==stroke"></span> {{stroke}}</button>
+</span>
+
+</div>
+<div>
+<span ng-repeat="age in getAllAges()">
+<button class="btn btn-default" ng-click="setAge(age)">
+    <span class="glyphicon glyphicon-check" ng-show="filterAge==age"></span> 
+    <span class="glyphicon glyphicon-unchecked" ng-hide="filterAge==age"></span> {{age}}</button>
+</span>
+
+</div>
+<div>
+<span ng-repeat="gen in getAllGenders()">
+<button class="btn btn-default" ng-click="setGender(gen)">
+    <span class="glyphicon glyphicon-check" ng-show="filterGender==gen"></span> 
+    <span class="glyphicon glyphicon-unchecked" ng-hide="filterGender==gen"></span> {{gen}}</button>
+</span>
+
+</div>
+
+  <h1>{{filterStroke}} {{filterGender}} {{filterAge}}</h1>
+  
+<table class="myTable">
+<tr><td>Place</td>
+    <td>Name</td>
+    <td>Team</td>
+    <td>Time</td></tr>
+    
+
+<tr ng-repeat="rec in findRows()">
+<td>{{rec.place}}</td>
+<td ng-show="rec.team=='Otters'"><a href="swimmer.htm#/n={{rec.name}}/s={{rec.stroke}}">{{rec.name}}</a></td>
+<td ng-hide="rec.team=='Otters'">{{rec.name}}</td>
+<td>{{rec.team}}</td>
+<td>{{rec.time}}</td>
+</tr>
+</table>
+</div>
+
+
+</body>
+</html>

@@ -244,116 +244,6 @@ sub CreateSwimmerPage
 {
     ($number, $name) = @_;
     $alias = checkForAlias($name);
-    print "Making Swimmer Page for $alias ($name)\n";
-    open(OUTFILE, ">$outputFolder\\P1_$alias.htm");
-    print OUTFILE "<html>\n";
-    print OUTFILE "<head>\n";
-    print OUTFILE "  <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "  <link href=\"goteam.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "</head>\n";
-    print OUTFILE "<body>\n";
-    print OUTFILE "<h1>$alias (2015)</h1>\n";
-    if ($alias =~ /Swimmer/)
-    {
-        print OUTFILE "<p>(What's up with this <a href=\"names.htm\">name</a>?)</p>"
-    }
-    print OUTFILE "<hr>\n<table width=\"100%\" class=\"table\">";
-    print OUTFILE "<tr><td>Event</td>";
-    print OUTFILE "    <td>Name</td>";
-    print OUTFILE "    <td>Place</td>";
-    print OUTFILE "    <td>Seed</td>";
-    print OUTFILE "    <td>Final</td>";
-    print OUTFILE "    <td>!</td>";
-    print OUTFILE "    <td>2015 Swim Results Only (click to see <a href=\"P2_$alias.htm\">All Meets</a>)</td></tr>\n";
-    $lastEvent = 0;
-    $swamIn1996 = 0;
-
-    foreach $skey (sort keys %mapKeyPlace)
-    {
-        ($sname, $eventNumber, $meet) = split(/\|/, $skey);
-        if ($sname eq $name && $mapMeetNumberStyle{$meet} ne "oldmeet")
-        {
-            $swamIn1996 = 1;
-            $locator = "Event".int($eventNumber);
-            if ($lastEvent != $eventNumber)
-            {
-                print OUTFILE "<tr class=\"headrow\"><td colspan=6><a name=\"$locator\">$eventNumber.</a> $mapNumberName{$eventNumber}</td></tr>\n";
-                $lastEvent = $eventNumber;
-            }
-            print OUTFILE "<tr class=\"$mapMeetNumberStyle{$meet}\">";
-            print OUTFILE "<td></td>\n";
-            print OUTFILE "    <td>$alias</td>\n";
-            print OUTFILE "    <td align=\"right\"><b>$mapKeyPlace{$skey}</b></td>\n";
-            print OUTFILE "    <td align=\"right\">$mapKeySeed{$skey}</td>\n";
-            print OUTFILE "    <td align=\"right\"><b>$mapKeyFinal{$skey}</b></td>\n";
-            if ($mapKeyFinal{$skey}==0 || $mapKeySeed{$skey} < $mapKeyFinal{$skey})
-            {
-                print OUTFILE "    <td>&nbsp;</td>\n";
-            }
-            else
-            {
-                print OUTFILE "    <td>&#x263a;</td>\n";
-            }
-            print OUTFILE "    <td><a href=\"Meet$meet.htm#$locator\">$mapMeetNumberName{$meet}</a></td></tr>\n";
-        }
-    }
-    print OUTFILE "</table>\n";
-    if ($swamIn1996 eq 0)
-    {
-        print OUTFILE "<p>$alias does not appear in any results for 2015 events,\n";
-        print OUTFILE " please look for earlier event on the <a href=\"P2_$alias.htm\">";
-        print OUTFILE "All Results page for $alias</a>.</p>\n";
-    }
-    print OUTFILE "$pageCloseText";
-    close(OUTFILE);
-    open(OUTFILE, ">$outputFolder\\P2_$alias.htm");
-    print OUTFILE "<html>\n";
-    print OUTFILE "<head>\n";
-    print OUTFILE "  <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "  <link href=\"goteam.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "</head>\n";
-    print OUTFILE "<body>\n";
-    print OUTFILE "<h1>$alias (all meets)</h1>\n";
-    if ($alias =~ /Swimmer/) {
-        print OUTFILE "<p>(What's up with this <a href=\"names.htm\">name</a>?)</p>"
-    }
-    print OUTFILE "<hr>\n<table width=\"100%\" class=\"table\">";
-    print OUTFILE "<tr><td>Event</td>\n";
-    print OUTFILE "    <td>Name</td>\n";
-    print OUTFILE "    <td>Place</td>\n";
-    print OUTFILE "    <td>Seed</td>\n";
-    print OUTFILE "    <td>Final</td>\n";
-    print OUTFILE "    <td>!</td>\n";
-    print OUTFILE "    <td>All Meets (click to see <a href=\"P1_$alias.htm\">only meets from 2015</a>)</td></tr>\n";
-    $lastEvent = 0;
-
-    foreach $skey (sort keys %mapKeyPlace)
-    {
-        ($sname, $eventNumber, $meet) = split(/\|/, $skey);
-        if ($sname eq $name)
-        {
-            $locator = "Event".int($eventNumber);
-            if ($lastEvent != $eventNumber)
-            {
-                print OUTFILE "<tr class=\"headrow\"><td colspan=6><a name=\"$locator\">$eventNumber.</a> $mapNumberName{$eventNumber}</td></tr>\n";
-                $lastEvent = $eventNumber;
-            }
-            print OUTFILE "<tr class=\"$mapMeetNumberStyle{$meet}\">";
-            print OUTFILE "<td></td>\n";
-            print OUTFILE "    <td>$alias</td>\n";
-            print OUTFILE "    <td align=\"right\"><b>$mapKeyPlace{$skey}</b></td>\n";
-            print OUTFILE "    <td align=\"right\">$mapKeySeed{$skey}</td>\n";
-            print OUTFILE "    <td align=\"right\"><b>$mapKeyFinal{$skey}</b></td>\n";
-            if ($mapKeyFinal{$skey}==0 || $mapKeySeed{$skey} < $mapKeyFinal{$skey}) {
-                print OUTFILE "    <td>&nbsp;</td>\n";
-            } else {
-                print OUTFILE "    <td>&#x263a;</td>\n";
-            }
-            print OUTFILE "    <td><a href=\"Meet$meet.htm#$locator\">$mapMeetNumberName{$meet}</a></td></tr>\n";
-        }
-    }
-    print OUTFILE "</table>$pageCloseText";
-    close(OUTFILE);
 }
 
 sub CreateMeetPage
@@ -361,55 +251,6 @@ sub CreateMeetPage
     ($meet) = @_;
     print "Making meet page for $meet\n";
 
-    open(OUTFILE, ">$outputFolder\\Meet$meet.htm");
-    print OUTFILE "<html>\n";
-    print OUTFILE "<head>\n";
-    print OUTFILE "  <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "  <link href=\"goteam.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "</head>\n";
-    print OUTFILE "<body>\n<h1>$mapMeetNumberName{$meet}</h1>\n";
-    print OUTFILE "<hr>\n";
-    print OUTFILE "<table width=\"100%\" class=\"table\">\n";
-    print OUTFILE "<tr><td>Event</td>\n";
-    print OUTFILE "    <td>Name</td>\n";
-    print OUTFILE "    <td>Place</td>\n";
-    print OUTFILE "    <td>Seed</td>\n";
-    print OUTFILE "    <td>Final</td>\n";
-    print OUTFILE "    <td>!</td>\n";
-    print OUTFILE "    <td>Team</td></tr>\n";
-    $lastEvent = 0;
-    $meetstyle = $mapMeetNumberStyle{$meet};
-
-    foreach $mkey (sort keys %mapMeetKeys)
-    {
-        $skey = $mapMeetKeys{$mkey};
-        ($sname, $eventNumber, $smeet) = split(/\|/, $skey);
-        $alias = checkForAlias($sname);
-        if ($smeet == $meet)
-        {
-            $locator = "Event".int($eventNumber);
-            if ($lastEvent != $eventNumber)
-            {
-                print OUTFILE "<tr class=\"headrow\"><td colspan=6><a name=\"$locator\">$eventNumber.</a> $mapNumberName{$eventNumber}</td></tr>\n";
-                $lastEvent = $eventNumber;
-            }
-            if (defined($mapNameNumber{$sname}))
-            {
-                print OUTFILE "<tr class=\"$meetstyle\"><td></td><td><a href=\"P1_$alias.htm#$locator\">$alias</a></td>\n";
-            }
-            else
-            {
-                print OUTFILE "<tr class=\"$meetstyle\"><td></td><td><font color=\"#AAAAAA\">$alias</font></td>\n";
-            }
-            print OUTFILE "    <td align=\"right\">$mapKeyPlace{$skey}</td>\n";
-            print OUTFILE "    <td align=\"right\">$mapKeySeed{$skey}</td>\n";
-            print OUTFILE "    <td align=\"right\">$mapKeyFinal{$skey}</td>\n";
-            print OUTFILE "    <td>&nbsp;</td>\n";
-            print OUTFILE "    <td>$mapKeyTeam{$skey}</td></tr>\n";
-        }
-    }
-    print OUTFILE "</table>$pageCloseText";
-    close(OUTFILE);
     dumpAPFileOut($meet);
     dumpMeetJSONOut($meet);
 }
@@ -574,28 +415,7 @@ sub dumpAllMapMeetKeys
 sub CreateFakePage
 {
     ($meet, $meetName) = @_;
-    print "Making fake page for $meet\n";
-    open(OUTFILE, ">$outputFolder\\Meet$meet.htm");
-    print OUTFILE "<html>\n";
-    print OUTFILE "<head>\n";
-    print OUTFILE "  <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "  <link href=\"goteam.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "</head>\n";
-    print OUTFILE "<body background=\"water.gif\">\n";
-    print OUTFILE "<h1 class=\"titletext\">Future Meet - $meetName</h1>\n";
-    print OUTFILE "<hr><p>The results for $meetName are not yet available yet.\n";
-    print OUTFILE "<hr><p>Please check back later for results of this meet.\n";
-    print OUTFILE "Meet results are available for:</p><ul>\n";
-
-    foreach $mnum (reverse (sort keys %mapMeetNumberName))
-    {
-        #if ($mapMeetNumberStyle{$meet} ne "oldmeet")
-        #{
-            print OUTFILE "<li><a href=\"Meet$mnum.htm\">$mapMeetNumberName{$mnum}</a>\n";
-        #}
-    }
-    print OUTFILE "</ul>$pageCloseText";
-    close(OUTFILE);
+    print "NO fake page for $meet\n";
 }
 
 sub trim($)
@@ -608,54 +428,8 @@ sub trim($)
 
 sub CreateAlphaPage
 {
-    print "Making Alphabetical Page\n";
-    open(OUTFILE, ">$outputFolder\\index.htm");
-    print OUTFILE "<html>\n";
-    print OUTFILE "<head>\n";
-    print OUTFILE "  <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "  <link href=\"goteam.css\" rel=\"stylesheet\" type=\"text/css\">\n";
-    print OUTFILE "</head>\n";
-    print OUTFILE "<body>\n<h1>Alphabetical Listing of Swimmers</h1>\n";
-    print OUTFILE "<hr><table style=\"table\"><tr><td><ul>\n";
-    %tempAliasMap = ();
-    $bucketCount = 0;
-    foreach $name (sort keys %mapNameNumber)
-    {
-        $alias = checkForAlias($name);
-        $tempAliasMap{$alias} = $name;
-    }
-    foreach $alias (sort keys %tempAliasMap)
-    {
-        $name = $tempAliasMap{$alias};
-        if (defined($mapSwam2004{$name}))
-        {
-            $number = $mapNameNumber{$name};
-            print OUTFILE "<li><a href=\"P1_$alias.htm\">$alias</a>\n";
-            $bucketCount++;
-            if ( $bucketCount>=20 ) {
-                $bucketCount=0;
-                print OUTFILE "</ul></td><td><ul>\n";
-            }
-        }
-    }
-    print OUTFILE "</ul></td></tr></table>\n";
-    print OUTFILE "<h3>Sea Otters from earlier meets</h3>\n";
-    print OUTFILE "<hr><table style=\"table\"><tr><td><ul>";
+    print "NO Alphabetical Page\n";
 
-    $bucketCount = 0;
-    foreach $alias (sort keys %tempAliasMap)
-    {
-        $name = $tempAliasMap{$alias};
-        $number = $mapNameNumber{$name};
-        print OUTFILE "<li><a href=\"P2_$alias.htm\">$alias</a>\n";
-        $bucketCount++;
-        if ( $bucketCount>=56 ) {
-            $bucketCount=0;
-            print OUTFILE "</ul></td><td><ul>\n";
-        }
-    }
-    print OUTFILE "</ul></td></tr></table>$pageCloseText";
-    close(OUTFILE);
 }
 
 

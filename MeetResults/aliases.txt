@@ -18,6 +18,7 @@ Bozzo, Zachary|ZacharyB
 Britsch, Mike|MikeB
 Brown, Jordan|JordanB
 Brown, Mia|MiaB
+Barrett, Hayley|HayleyB
 Callaghan, Charles|CharlesC2
 Callaghan, Marcus|MarcusC
 Chaves-Meyles, Dakota|DakotaC1
@@ -54,6 +55,7 @@ Dubbeldam, Bram|BramD
 Dubbeldam, Max|MaxD
 Eisenhart, Alex|AlexE
 Eisenhart, Ethan|EthanE
+Enterline, Sarah|SarahE
 Elerick, Theresa|TheresaE
 Everson, Eric|EricE
 Fennern, Andrea|AndreaF
@@ -145,6 +147,8 @@ Nelson, Zachary|ZacharyN
 Newick, Aisha|AishaN
 Newick, Rae|RaeN
 Newick, Sam|SamN
+Ngo, May|MayN
+Ngo, Dan|DanN
 Nill, Jessica|JessicaN
 O'Dowd, Shannon|ShannonO
 O'Bryne, Matthiew|MatthiewO
