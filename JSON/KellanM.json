@@ -1,0 +1,44 @@
+
+{"scores":[
+  {
+    "name":"KellanM",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"51.34",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"KellanM",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"40.83",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"KellanM",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"46.29",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  }
+]}
+
+

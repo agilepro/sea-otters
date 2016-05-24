@@ -1,0 +1,135 @@
+
+{"scores":[
+  {
+    "name":"JamesSa",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-02",
+    "time":"1:42.07",
+    "place":"13",
+    "team":"Otters",
+    "yards":25,
+    "meet":"044",
+    "opponent":"Trials"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-09",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"045",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-16",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"046",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-07",
+    "time":"44.82",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"049",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-14",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"050",
+    "opponent":"Champs"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-02",
+    "time":"54.44",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"044",
+    "opponent":"Trials"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-09",
+    "time":"50.77",
+    "place":"16",
+    "team":"Otters",
+    "yards":25,
+    "meet":"045",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-16",
+    "time":"54.63",
+    "place":"15",
+    "team":"Otters",
+    "yards":25,
+    "meet":"046",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-07",
+    "time":"45.77",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"049",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"JamesSa",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-14",
+    "time":"41.21",
+    "place":"32",
+    "team":"Otters",
+    "yards":25,
+    "meet":"050",
+    "opponent":"Champs"
+  }
+]}
+
+

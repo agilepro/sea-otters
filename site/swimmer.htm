@@ -110,25 +110,23 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.setStroke = function(s) {
         $scope.filterStroke = s;
     }
+    propName = {
+        "Medley Relay":"Medley Relay", 
+        "Back":"Backstroke", 
+        "Breast":"Breastroke", 
+        "Butterfly":"Butterfly", 
+        "Freestyle":"Freestyle",
+        "Freestyle Relay":"Freestyle Relay"
+    }
+    $scope.properStroke = function(key) {
+        return propName[key];
+    }
 
     
 });
 </script>
 
-<style>
-.myTable {
-    margin:20px;
-}
-.myTable td {
-    padding-left:10px;
-    padding-right:10px;
-    background-color:white;
-    text-align: center;
-}
-body {
-    margin:5px;
-}
-</style>
+
 
 </head>
 
@@ -141,7 +139,7 @@ body {
 
 <h1>{{alias}}</h1>
 
-<div>
+<div class="buttonBar">
 <span ng-repeat="stroke in getAllStrokes()">
 <button class="btn btn-default" ng-click="setStroke(stroke)">
     <span class="glyphicon glyphicon-check" ng-show="filterStroke==stroke"></span> 
@@ -151,24 +149,35 @@ body {
 </div>
 
 
-  <h1>{{filterStroke}} </h1>
-  
-<table class="myTable">
-<tr><td>Place</td>
-    <td>Name</td>
-    <td>Time</td>
-    <td>Date</td>
-    <td>Event</td>
-</tr>
 
-<tr ng-repeat="rec in findRows()">
-<td>{{rec.place}}</td>
-<td>{{rec.name}}</td>
-<td>{{rec.time}}</td>
-<td><a href="meet.htm#/m={{rec.meet}}/s={{rec.stroke}}/a={{rec.age}}/g={{rec.gender}}">{{rec.date}}</a></td>
-<td>{{rec.opponent}}</td>
-</tr>
-</table>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1>{{properStroke(filterStroke)}}</h1>
+  </div>
+  <div class="panel-body">
+
+  
+    <table class="myTable">
+    <tr class="myTableHeader">
+        <td>Place</td>
+        <td>Name</td>
+        <td style="text-align:right">Time</td>
+        <td>Date</td>
+        <td>Event</td>
+    </tr>
+
+    <tr ng-repeat="rec in findRows()">
+    <td style="text-align:right">{{rec.place}}</td>
+    <td>{{rec.name}}</td>
+    <td style="text-align:right">{{rec.time}}</td>
+    <td><a href="meet.htm#/m={{rec.meet}}/s={{rec.stroke}}/a={{rec.age}}/g={{rec.gender}}">{{rec.date}}</a></td>
+    <td>{{rec.opponent}}</td>
+    </tr>
+    </table>
+  </div>  
+  <div class="panel-footer"></div>
+</div>
+</div>
 </div>
 
 

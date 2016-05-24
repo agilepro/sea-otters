@@ -1,0 +1,44 @@
+
+{"scores":[
+  {
+    "name":"Mariekev",
+    "stroke":"Back",
+    "age":"9-10",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"30.43",
+    "place":"38",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"Mariekev",
+    "stroke":"Breast",
+    "age":"9-10",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"32.90",
+    "place":"32",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"Mariekev",
+    "stroke":"Freestyle",
+    "age":"9-10",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"25.75",
+    "place":"46",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  }
+]}
+
+

@@ -1,0 +1,122 @@
+
+{"scores":[
+  {
+    "name":"SamanthaB",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"54.02",
+    "place":"13",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"53.24",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"44.49",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"44.53",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-05-30",
+    "time":"2:36.19",
+    "place":"2",
+    "team":"Otters",
+    "yards":100,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"46.69",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"42.06",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"51.63",
+    "place":"13",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"SamanthaB",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"47.95",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

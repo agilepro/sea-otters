@@ -1,0 +1,31 @@
+
+{"scores":[
+  {
+    "name":"AndreD",
+    "stroke":"Back",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2002-06-15",
+    "time":"40.61",
+    "place":"9",
+    "team":"Otters",
+    "yards":25,
+    "meet":"010",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"AndreD",
+    "stroke":"Freestyle",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2002-06-15",
+    "time":"45.92",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"010",
+    "opponent":"Crossgate"
+  }
+]}
+
+

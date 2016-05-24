@@ -1,0 +1,148 @@
+
+{"scores":[
+  {
+    "name":"MatthiewO",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"37.00",
+    "place":"2",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"40.51",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"33.84",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"35.50",
+    "place":"3",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-05-30",
+    "time":"2:36.19",
+    "place":"2",
+    "team":"Otters",
+    "yards":100,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-20",
+    "time":"x2:42.10",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-27",
+    "time":"x2:31.43",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"37.88",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"35.97",
+    "place":"3",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"41.40",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"MatthiewO",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"37.57",
+    "place":"7",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

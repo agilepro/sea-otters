@@ -1,0 +1,57 @@
+
+{"scores":[
+  {
+    "name":"JackN",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"1:30.41",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"JackN",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"1:04.35",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"JackN",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"53.59",
+    "place":"15",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"JackN",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"47.39",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

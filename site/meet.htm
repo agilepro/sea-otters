@@ -106,6 +106,10 @@ app.controller('myCtrl', function($scope, $http) {
     if ($scope.param.m) {
         $scope.getMeet($scope.param.m);
     }
+    else {
+        $scope.getMeet("105");
+    }
+    
     if ($scope.param.g) {
         $scope.filterGender = $scope.param.g;
     }
@@ -115,9 +119,26 @@ app.controller('myCtrl', function($scope, $http) {
     if ($scope.param.s) {
         $scope.filterStroke = $scope.param.s;
     }
+    $scope.updateAddressBar = function() {
+        $scope.param.s = $scope.filterStroke;
+        $scope.param.a = $scope.filterAge;
+        $scope.param.g = $scope.filterGender;
+        setAddressBar($scope.param);
+    }
 
     $scope.getAllStrokes = function() {
         return ["Medley Relay", "Back", "Breast", "Butterfly", "Freestyle", "Freestyle Relay"];
+    }
+    propName = {
+        "Medley Relay":"Medley Relay", 
+        "Back":"Backstroke", 
+        "Breast":"Breastroke", 
+        "Butterfly":"Butterfly", 
+        "Freestyle":"Freestyle",
+        "Freestyle Relay":"Freestyle Relay"
+    }
+    $scope.properStroke = function(key) {
+        return propName[key];
     }
     $scope.setStroke = function(s) {
         $scope.filterStroke = s;
@@ -129,6 +150,7 @@ app.controller('myCtrl', function($scope, $http) {
         if (!possGender[$scope.filterGender]) {
             $scope.filterGender = Object.keys(possGender)[0];
         }
+        $scope.updateAddressBar();
     }
     $scope.getAllAges = function() {
         if ($scope.possMap[$scope.filterStroke]) {
@@ -146,6 +168,7 @@ app.controller('myCtrl', function($scope, $http) {
         if (!possGender[$scope.filterGender]) {
             $scope.filterGender = Object.keys(possGender)[0];
         }
+        $scope.updateAddressBar();
     }
     $scope.getAllGenders = function() {
         if ($scope.possMap[$scope.filterStroke]) {
@@ -157,25 +180,13 @@ app.controller('myCtrl', function($scope, $http) {
     }
     $scope.setGender = function(s) {
         $scope.filterGender = s;
+        $scope.updateAddressBar();
     }
     
 });
 </script>
 
-<style>
-.myTable {
-    margin:20px;
-}
-.myTable td {
-    padding-left:10px;
-    padding-right:10px;
-    background-color:white;
-    text-align: center;
-}
-body {
-    margin:5px;
-}
-</style>
+
 
 </head>
 
@@ -186,50 +197,63 @@ body {
 
 <div ng-app="myApp" ng-controller="myCtrl">
 
-<h1>{{date}} {{opponent}}</h1>
+<h1>{{opponent}} {{date}}</h1>
 
-<div>
-<span ng-repeat="stroke in getAllStrokes()">
-<button class="btn btn-default" ng-click="setStroke(stroke)">
-    <span class="glyphicon glyphicon-check" ng-show="filterStroke==stroke"></span> 
-    <span class="glyphicon glyphicon-unchecked" ng-hide="filterStroke==stroke"></span> {{stroke}}</button>
-</span>
+<div >
+    <div class="buttonBar">
+    <span ng-repeat="stroke in getAllStrokes()">
+    <button class="btn btn-primary" ng-click="setStroke(stroke)">
+        <span class="glyphicon glyphicon-check" ng-show="filterStroke==stroke"></span> 
+        <span class="glyphicon glyphicon-unchecked" ng-hide="filterStroke==stroke"></span> {{stroke}}</button>
+    </span>
 
+    </div>
+    <div class="buttonBar">
+    <span ng-repeat="age in getAllAges()">
+    <button class="btn btn-primary" ng-click="setAge(age)">
+        <span class="glyphicon glyphicon-check" ng-show="filterAge==age"></span> 
+        <span class="glyphicon glyphicon-unchecked" ng-hide="filterAge==age"></span> {{age}}</button>
+    </span>
+
+    </div>
+    <div class="buttonBar">
+    <span ng-repeat="gen in getAllGenders()">
+    <button class="btn btn-primary" ng-click="setGender(gen)">
+        <span class="glyphicon glyphicon-check" ng-show="filterGender==gen"></span> 
+        <span class="glyphicon glyphicon-unchecked" ng-hide="filterGender==gen"></span> {{gen}}</button>
+    </span>
+
+    </div>
 </div>
-<div>
-<span ng-repeat="age in getAllAges()">
-<button class="btn btn-default" ng-click="setAge(age)">
-    <span class="glyphicon glyphicon-check" ng-show="filterAge==age"></span> 
-    <span class="glyphicon glyphicon-unchecked" ng-hide="filterAge==age"></span> {{age}}</button>
-</span>
 
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1>{{properStroke(filterStroke)}}</h1>
+    <h4><i>{{filterGender}} {{filterAge}}</i></h4>
+  </div>
+  <div class="panel-body">
+
+    <table class="myTable">
+    <tr class="myTableHeader">
+        <td style="text-align:right">Place</td>
+        <td>Name</td>
+        <td style="text-align:right">Time</td>
+        <td>Team</td></tr>
+        
+
+    <tr ng-repeat="rec in findRows()">
+    <td style="text-align:right">{{rec.place}}</td>
+    <td ng-show="rec.team=='Otters'"><a href="swimmer.htm#/n={{rec.name}}/s={{rec.stroke}}">{{rec.name}}</a></td>
+    <td ng-hide="rec.team=='Otters'">{{rec.name}}</td>
+    <td style="text-align:right">{{rec.time}}</td>
+    <td>{{rec.team}}</td>
+
+    </tr>
+    </table>
+
+  </div>  
+  <div class="panel-footer"></div>
 </div>
-<div>
-<span ng-repeat="gen in getAllGenders()">
-<button class="btn btn-default" ng-click="setGender(gen)">
-    <span class="glyphicon glyphicon-check" ng-show="filterGender==gen"></span> 
-    <span class="glyphicon glyphicon-unchecked" ng-hide="filterGender==gen"></span> {{gen}}</button>
-</span>
-
-</div>
-
-  <h1>{{filterStroke}} {{filterGender}} {{filterAge}}</h1>
-  
-<table class="myTable">
-<tr><td>Place</td>
-    <td>Name</td>
-    <td>Team</td>
-    <td>Time</td></tr>
-    
-
-<tr ng-repeat="rec in findRows()">
-<td>{{rec.place}}</td>
-<td ng-show="rec.team=='Otters'"><a href="swimmer.htm#/n={{rec.name}}/s={{rec.stroke}}">{{rec.name}}</a></td>
-<td ng-hide="rec.team=='Otters'">{{rec.name}}</td>
-<td>{{rec.team}}</td>
-<td>{{rec.time}}</td>
-</tr>
-</table>
 </div>
 
 

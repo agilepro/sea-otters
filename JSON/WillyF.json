@@ -1,0 +1,96 @@
+
+{"scores":[
+  {
+    "name":"WillyF",
+    "stroke":"Back",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"48.12",
+    "place":"15",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Back",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"42.01",
+    "place":"23",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Breast",
+    "age":"8 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Breast",
+    "age":"8 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Butterfly",
+    "age":"8 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Freestyle",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"33.69",
+    "place":"35",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"WillyF",
+    "stroke":"Freestyle",
+    "age":"7-8",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"45.69",
+    "place":"21",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  }
+]}
+
+

@@ -1,0 +1,57 @@
+
+{"scores":[
+  {
+    "name":"JenaD",
+    "stroke":"Back",
+    "age":"15-18",
+    "gender":"Girls",
+    "date":"2011-05-21",
+    "time":"48.69",
+    "place":"14",
+    "team":"Otters",
+    "yards":50,
+    "meet":"072",
+    "opponent":"Trials"
+  },
+  {
+    "name":"JenaD",
+    "stroke":"Breast",
+    "age":"15-18",
+    "gender":"Girls",
+    "date":"2011-05-21",
+    "time":"57.67",
+    "place":"19",
+    "team":"Otters",
+    "yards":50,
+    "meet":"072",
+    "opponent":"Trials"
+  },
+  {
+    "name":"JenaD",
+    "stroke":"Butterfly",
+    "age":"15-18",
+    "gender":"Girls",
+    "date":"2011-05-21",
+    "time":"46.89",
+    "place":"15",
+    "team":"Otters",
+    "yards":50,
+    "meet":"072",
+    "opponent":"Trials"
+  },
+  {
+    "name":"JenaD",
+    "stroke":"Freestyle",
+    "age":"15-18",
+    "gender":"Girls",
+    "date":"2011-05-21",
+    "time":"41.59",
+    "place":"16",
+    "team":"Otters",
+    "yards":50,
+    "meet":"072",
+    "opponent":"Trials"
+  }
+]}
+
+

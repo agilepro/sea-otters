@@ -1,0 +1,122 @@
+
+{"scores":[
+  {
+    "name":"RyanC",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"44.39",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"40.27",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"38.23",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-13",
+    "time":"2:17.92",
+    "place":"2",
+    "team":"Otters",
+    "yards":100,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-20",
+    "time":"2:07.13",
+    "place":"1",
+    "team":"Otters",
+    "yards":100,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-27",
+    "time":"1:53.74",
+    "place":"2",
+    "team":"Otters",
+    "yards":100,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"37.32",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"35.91",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"RyanC",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"33.37",
+    "place":"2",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

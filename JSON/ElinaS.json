@@ -1,0 +1,109 @@
+
+{"scores":[
+  {
+    "name":"ElinaS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-05-19",
+    "time":"1:31.15",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"079",
+    "opponent":"Trials"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-06-02",
+    "time":"57.05",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"080",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-06-09",
+    "time":"1:14.94",
+    "place":"9",
+    "team":"Otters",
+    "yards":25,
+    "meet":"081",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Butterfly",
+    "age":"8 & Under",
+    "gender":"Girls",
+    "date":"2012-05-19",
+    "time":"44.83",
+    "place":"19",
+    "team":"Otters",
+    "yards":25,
+    "meet":"079",
+    "opponent":"Trials"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2012-06-09",
+    "time":"5:08.21",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"081",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-05-19",
+    "time":"1:06.50",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"079",
+    "opponent":"Trials"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-06-02",
+    "time":"59.35",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"080",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"ElinaS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2012-06-09",
+    "time":"57.62",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"081",
+    "opponent":"Crossgate"
+  }
+]}
+
+

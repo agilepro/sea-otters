@@ -1,0 +1,57 @@
+
+{"scores":[
+  {
+    "name":"AbigaleK",
+    "stroke":"Back",
+    "age":"11-12",
+    "gender":"Girls",
+    "date":"2014-05-17",
+    "time":"50.82",
+    "place":"18",
+    "team":"Otters",
+    "yards":50,
+    "meet":"093",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AbigaleK",
+    "stroke":"Breast",
+    "age":"11-12",
+    "gender":"Girls",
+    "date":"2014-05-17",
+    "time":"54.78",
+    "place":"19",
+    "team":"Otters",
+    "yards":50,
+    "meet":"093",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AbigaleK",
+    "stroke":"Butterfly",
+    "age":"11-12",
+    "gender":"Girls",
+    "date":"2014-05-17",
+    "time":"51.50",
+    "place":"19",
+    "team":"Otters",
+    "yards":50,
+    "meet":"093",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AbigaleK",
+    "stroke":"Freestyle",
+    "age":"11-12",
+    "gender":"Girls",
+    "date":"2014-05-17",
+    "time":"43.70",
+    "place":"17",
+    "team":"Otters",
+    "yards":50,
+    "meet":"093",
+    "opponent":"Trials"
+  }
+]}
+
+

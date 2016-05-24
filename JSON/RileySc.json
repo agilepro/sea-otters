@@ -1,0 +1,148 @@
+
+{"scores":[
+  {
+    "name":"RileySc",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"39.85",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-06",
+    "time":"37.08",
+    "place":"3",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"37.50",
+    "place":"3",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"38.91",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"35.09",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-27",
+    "time":"x2:31.43",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"37.97",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-06",
+    "time":"38.67",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"39.48",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"29.80",
+    "place":"2",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"RileySc",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"36.11",
+    "place":"9",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

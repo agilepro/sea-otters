@@ -1,8 +1,7 @@
 body {
-  background: #FFFFFF; 
-  background-image: url('water.gif');
-  font-size: 10pt;
+  background: #DDEEFF; 
   color: black;
+  margin: 15px;
 }
 
 
@@ -93,18 +92,6 @@ body {
   border-width: 1px;
 }
 
-.bodyClass
-{
-  background: #FFFFFF; 
-  background-image: url('../images/main_bg1.gif');
-  font-size: 10pt;
-  color: black;
-  margin:0;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-}
 
 .submitClass
 {
@@ -263,4 +250,20 @@ table
 .help-cursor {
   CURSOR: help;
 }
+.myTable {
+    margin:20px;
+}
+.myTableHeader {
+    border-bottom: medium solid #888;
+}
+.myTable td {
+    padding-left:10px;
+    padding-right:10px;
+}
 
+body {
+    margin:15px;
+}
+.buttonBar {
+    margin:10px;
+}

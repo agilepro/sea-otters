@@ -1,0 +1,122 @@
+
+{"scores":[
+  {
+    "name":"KageT",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"1:01.22",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"53.62",
+    "place":"5",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"55.89",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"57.24",
+    "place":"12",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-05-30",
+    "time":"51.59",
+    "place":"7",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"42.06",
+    "place":"7",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"45.41",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"42.43",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"KageT",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-27",
+    "time":"41.63",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

@@ -1,0 +1,96 @@
+
+{"scores":[
+  {
+    "name":"LaytonS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"1:08.33",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"52.48",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"1:05.56",
+    "place":"13",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-20",
+    "time":"x2:42.10",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-06",
+    "time":"44.75",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-13",
+    "time":"39.72",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"LaytonS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2015-06-20",
+    "time":"53.30",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  }
+]}
+
+

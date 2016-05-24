@@ -1,0 +1,135 @@
+
+{"scores":[
+  {
+    "name":"ThomasS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-02",
+    "time":"1:11.78",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"044",
+    "opponent":"Trials"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-09",
+    "time":"48.39",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"045",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-16",
+    "time":"38.70",
+    "place":"9",
+    "team":"Otters",
+    "yards":25,
+    "meet":"046",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-07",
+    "time":"DQ",
+    "place":"--",
+    "team":"Otters",
+    "yards":25,
+    "meet":"049",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-14",
+    "time":"37.66",
+    "place":"18",
+    "team":"Otters",
+    "yards":25,
+    "meet":"050",
+    "opponent":"Champs"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-02",
+    "time":"1:12.20",
+    "place":"18",
+    "team":"Otters",
+    "yards":25,
+    "meet":"044",
+    "opponent":"Trials"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-09",
+    "time":"50.46",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"045",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-06-16",
+    "time":"47.31",
+    "place":"14",
+    "team":"Otters",
+    "yards":25,
+    "meet":"046",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-07",
+    "time":"42.87",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"049",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"ThomasS",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Boys",
+    "date":"2007-07-14",
+    "time":"37.52",
+    "place":"31",
+    "team":"Otters",
+    "yards":25,
+    "meet":"050",
+    "opponent":"Champs"
+  }
+]}
+
+

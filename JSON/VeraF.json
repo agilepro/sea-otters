@@ -1,0 +1,148 @@
+
+{"scores":[
+  {
+    "name":"VeraF",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"42.88",
+    "place":"6",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-06",
+    "time":"50.33",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"37.07",
+    "place":"2",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"33.65",
+    "place":"3",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Back",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"36.50",
+    "place":"8",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle Relay",
+    "age":"6 & Under",
+    "gender":"Mixed",
+    "date":"2015-06-27",
+    "time":"x2:31.43",
+    "place":"--",
+    "team":"Otters",
+    "yards":100,
+    "meet":"105",
+    "opponent":"Crossgate"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-05-30",
+    "time":"1:05.72",
+    "place":"19",
+    "team":"Otters",
+    "yards":25,
+    "meet":"101",
+    "opponent":"Almaden"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-06",
+    "time":"1:12.53",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"102",
+    "opponent":"Creekside"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-13",
+    "time":"37.30",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"103",
+    "opponent":"Shadowbrook"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-20",
+    "time":"34.42",
+    "place":"7",
+    "team":"Otters",
+    "yards":25,
+    "meet":"104",
+    "opponent":"Pinehurst"
+  },
+  {
+    "name":"VeraF",
+    "stroke":"Freestyle",
+    "age":"6 & Under",
+    "gender":"Girls",
+    "date":"2015-06-27",
+    "time":"43.27",
+    "place":"11",
+    "team":"Otters",
+    "yards":25,
+    "meet":"105",
+    "opponent":"Crossgate"
+  }
+]}
+
+

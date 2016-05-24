@@ -1,0 +1,57 @@
+
+{"scores":[
+  {
+    "name":"AustinF",
+    "stroke":"Back",
+    "age":"9-10",
+    "gender":"Boys",
+    "date":"2003-05-10",
+    "time":"53.10",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"015",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AustinF",
+    "stroke":"Breast",
+    "age":"9-10",
+    "gender":"Boys",
+    "date":"2003-05-10",
+    "time":"33.96",
+    "place":"4",
+    "team":"Otters",
+    "yards":25,
+    "meet":"015",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AustinF",
+    "stroke":"Butterfly",
+    "age":"9-10",
+    "gender":"Boys",
+    "date":"2003-05-10",
+    "time":"42.83",
+    "place":"10",
+    "team":"Otters",
+    "yards":25,
+    "meet":"015",
+    "opponent":"Trials"
+  },
+  {
+    "name":"AustinF",
+    "stroke":"Freestyle",
+    "age":"9-10",
+    "gender":"Boys",
+    "date":"2003-05-10",
+    "time":"40.07",
+    "place":"9",
+    "team":"Otters",
+    "yards":25,
+    "meet":"015",
+    "opponent":"Trials"
+  }
+]}
+
+

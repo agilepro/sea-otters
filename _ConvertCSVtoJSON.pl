@@ -110,7 +110,7 @@ sub readCSV {
     
     $meetId = "??";
     
-    if ($fileToRead =~ /APFile_meet(\d\d).csv/) {
+    if ($fileToRead =~ /APFile_meet(\d\d\d).csv/) {
         $meetId = $1;
     }
     
