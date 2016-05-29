@@ -127,7 +127,7 @@ app.controller('myCtrl', function($scope, $http) {
     }
 
     $scope.getAllStrokes = function() {
-        return ["Medley Relay", "Back", "Breast", "Butterfly", "Freestyle", "Freestyle Relay"];
+        return Object.keys($scope.possMap);
     }
     propName = {
         "Medley Relay":"Medley Relay", 
@@ -255,6 +255,8 @@ app.controller('myCtrl', function($scope, $http) {
   <div class="panel-footer"></div>
 </div>
 </div>
+<a href="meetList.htm">All Meets</a>
+<a href="swimmerList.htm">All Swimmers</a>
 
 
 </body>

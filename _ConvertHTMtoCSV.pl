@@ -297,7 +297,7 @@ sub dumpAPFileOut
                 }
                 $relayCount = $relayCount + 1;
                 if ($relayCount>3) {
-                    $record = "$trimPlace. $trimTeam ($relayNames), $trimFinal; ";
+                    $record = "$trimPlace, $trimTeam ($relayNames), $trimFinal. ";
                     for (my $charNo = 0; $charNo < length($record); $charNo++) {
                         $oneChar = substr ($record, $charNo, 1);
                         print OUTFILE $oneChar;
@@ -311,7 +311,7 @@ sub dumpAPFileOut
                 }
             }
             else {
-                $record = "$trimPlace. $sname, $trimTeam, $trimFinal; ";
+                $record = "$trimPlace, $sname, $trimTeam, $trimFinal. ";
                 for (my $charNo = 0; $charNo < length($record); $charNo++) {
                     $oneChar = substr ($record, $charNo, 1);
                     print OUTFILE $oneChar;

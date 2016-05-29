@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="goteam.css" rel="stylesheet" type="text/css">
+  <script src="js/angular.js"></script>
+  
+<script>
+function parsePageParams() {
+    var param = [];
+    var curPath = window.location.href;
+    var hashPos = curPath.indexOf("#/");
+    if (hashPos>0) {
+        var tail = curPath.substring(hashPos+2);
+        var elems = tail.split("/");
+        for(var i=0; i<elems.length; i++) {
+            var part = elems[i];
+            var equalsPos = part.indexOf("=");
+            if (equalsPos>0) {
+                var paramName = part.substring(0,equalsPos);
+                var paramVal = part.substring(equalsPos+1);
+                param[paramName]=decodeURIComponent(paramVal);
+            }
+        }
+    }
+    return param;
+}
+
+function setAddressBar(param) {
+    var curPath = window.location.toString();
+    var hashPos = curPath.indexOf("#");
+    var newAddr = "";
+    if (hashPos>0) {
+        newAddr = curPath.substring(0,hashPos+1);
+    }
+    else {
+        newAddr = curPath + "#";
+    }
+    for (var key in param) {
+        if (param.hasOwnProperty(key)) {
+            newAddr = newAddr + "/"+key+"="+window.encodeURIComponent(param[key]);
+        }
+    }
+    window.location = newAddr;
+}
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $scope.param = parsePageParams();
+    $scope.data = {"alias":[]};
+    
+    $scope.getAllMeets = function() {
+        $http.get("data/allAlias.json")
+        .success(function(data) {
+            $scope.data = data;
+        });
+        
+    }
+    $scope.filter = "";
+    $scope.getAllMeets();
+    
+    $scope.filteredRecs = function() {
+        var result = [];
+        var filterlc = $scope.filter.toLowerCase();
+        $scope.data.alias.forEach( function(item) {
+            if (!filterlc || item.toLowerCase().indexOf(filterlc)>=0) {
+                result.push(item);
+            }
+        });
+        result.sort();
+        return result;
+    }
+});
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1>All Swimmers</h1>
+  </div>
+  <div class="panel-body">
+    <div class="form-group form-inline">
+      Filter: <input ng-model="filter" class="form-control" style="width:300px">
+    </div>
+    <table class="myTable">
+    <tr class="myTableHeader">
+        <td >Alias</td>
+    </tr>
+        
+
+    <tr ng-repeat="rec in filteredRecs()">
+    <td ><a href="swimmer.htm#/n={{rec}}/">{{rec}}</a></td>
+
+    </tr>
+    </table>
+
+  </div>  
+  <div class="panel-footer"></div>
+</div>
+</div>
+
+<a href="meetList.htm">All Meets</a>
+<a href="swimmerList.htm">All Swimmers</a>
+
+</body>
+</html>

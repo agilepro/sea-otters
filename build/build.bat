@@ -1,9 +1,9 @@
 set tempFolder=e:\temp\sobuild\temp
 set outputFolder=e:\temp\sobuild\out
-set srcFolder=d:\svn\mendo\SeaOtters\
+set srcFolder=d:\GitHub\sea-otters\trunk\
 
 del /q %outputFolder%\*.* 
-copy %srcFolder%\site\*.* %outputFolder%
+xcopy /s /y %srcFolder%\site\*.* %outputFolder%
 
-d:\Perl\bin\perl.exe %srcFolder%\_GatherSwimInfo.pl
+d:\Perl\bin\perl.exe %srcFolder%\_GatherSwimInfo.pl >out.txt
 pause

@@ -4,6 +4,12 @@ body {
   margin: 15px;
 }
 
+a {
+    color:black;
+}
+a:hover {
+    background-color:#DDEEFF;
+}
 
 .prompt
 {

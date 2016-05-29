@@ -172,7 +172,7 @@ sub printEvent {
         $number =~ s/Unknown Unknown/Unknown, Unknown/g;
         
         
-        if ($number  =~ /^(\d+|--)\. (.*) \((.+, .+) (\d\d?), (.+, .+) (\d\d?), (.+, .+) (\d\d?), (.+, .+) (\d\d?)\), (.+)$/) {
+        if ($number  =~ /^(\d+|--)\. (.*) \((.+, .+) W?M?(\d\d?), (.+, .+) W?M?(\d\d?), (.+, .+) W?M?(\d\d?), (.+, .+) W?M?(\d\d?)\), (.+)$/) {
             $position = $1;
             $time = $11;
             $team = findTeam($2);
@@ -195,11 +195,11 @@ sub printEvent {
         }
         elsif ($number  =~ /^(\d+|--)\. (.*) \((.*)\) (.+)$/) {
             $position = $1;
-            print ("\n#   1-$1 2-$2 3-$3 4-$4");
+            print ("\nERROR MEET $meetId\n!   $1|$2|$3|$4");
         }
         elsif ($number  =~ /^(.*)\((.*)\)(.*)$/) {
             $position = $1;
-            print ("\n!   1-$1 2-$2 3-$3 4-$4");
+            print ("\nERROR MEET $meetId\n!   $1|$2|$3|$4");
         }
         elsif ($number  =~ /^(\d+|--)\. (.*), (.*), (.*), (.*)$/) {
             $position = $1;
@@ -211,7 +211,7 @@ sub printEvent {
             push @allScoreByEvent, "$date|$stroke|$age|$gender|$position|$time|$alias|$team|$yards|$opponent|$meetId";
         }
         else {
-            #print "\nNO MATCH: ($number)";
+            print ("\nNO MATCH $meetId\n!   $number");
         }
     }
 }
@@ -513,10 +513,65 @@ sub genSwimmerFiles {
     
 }
 
+sub genAllMeetsFiles {
+
+    @allScoreByEvent = sort @allScoreByEvent;
+    my $commaTrick = "";
+    
+    my $lastEvent = "";
+    
+    print "Making All Meets JSON\n";
+    open(OUTFILE, ">$outputFolder\\data\\allMeets.json");
+    print OUTFILE "{\"meets\":[";
+    
+    foreach my $aline (@allScoreByEvent) {
+        my($date, $stroke, $age, $gender, $position, $time, $alias, $team, $yards, $opponent, $meetId) = split(/\|/, $aline);
+        if ($lastEvent ne $meetId) {
+            $lastEvent = $meetId;
+            print OUTFILE "$commaTrick\n  {";
+            print OUTFILE "\n    \"date\":\"$date\",";
+            print OUTFILE "\n    \"meetId\":\"$meetId\",";
+            print OUTFILE "\n    \"opponent\":\"$opponent\"";
+            print OUTFILE "\n  }";
+            $commaTrick = ",";
+        }
+    }
+    print OUTFILE "\n]}";
+    close(OUTFILE);
+    
+}
+
+sub genAllAliasFiles {
+
+    @allScoreByName = sort @allScoreByName;
+    my $commaTrick = "";
+    
+    my $lastAlias = "";
+    
+    print "Making All Alias JSON\n";
+    open(OUTFILE, ">$outputFolder\\data\\allAlias.json");
+    print OUTFILE "{\"alias\":[";
+    
+    foreach my $aline (@allScoreByName) {
+        my($alias, $stroke, $age, $gender, $date, $time, $position, $team, $yards, $opponent, $meetId) = split(/\|/, $aline);
+        if ($lastAlias ne $alias) {
+            $lastAlias = $alias;
+            if ($team eq "Otters") {
+                print OUTFILE "$commaTrick\n  \"$alias\"";
+                $commaTrick = ",";
+            }
+        }
+    }
+    print OUTFILE "\n]}";
+    close(OUTFILE);
+    
+}
 
 print "\n--- START ---";
 loadAliasFile();
 readAllCSVFiles();
 genMeetFiles();
 genSwimmerFiles();
+genAllMeetsFiles();
+genAllAliasFiles();
 print "\n--- RUN END ---\n";
