@@ -1,7 +1,7 @@
 var fs = require("fs");
 var data = '';
-var sourceFolder = "d:/GitHub/sea-otters/trunk/APFiles/";
-var destFolder = "e:/temp/sobuild/out/data/";
+var sourceFolder = process.env.srcFolder + "APFiles/";
+var destFolder = process.env.outputFolder + "data/";
 var aliasMap = {};
 var aliasReverse = {};
 var otherMap = {};
@@ -17,10 +17,16 @@ function processFile(sourceFile) {
         doNextFile();
         return;
     }
+    
     var meetId = sourceFile.substring(11,14);
     var fullSource = sourceFolder + sourceFile;
     var fullDest   = destFolder   + sourceFile;
-    console.log("Processing: "+fullSource+" --TO-- "+fullDest);
+    
+    if (!fs.existsSync(fullSource)) {
+        console.log('!! Could NOT find file: '+fullSource);
+    }
+    console.log("Processing: "+fullSource);
+    console.log("     to --> "+fullDest);
     var readerStream = fs.createReadStream(fullSource, {
         encoding: 'utf8',
         fd: null,
@@ -175,6 +181,12 @@ function findGender (line) {
     else if (line.indexOf("Boy")>=0) {
         return "Boys";
     }
+    if (line.indexOf("Men")>=0) {
+        return "Boys";
+    }
+    if (line.indexOf("Women")>=0) {
+        return "Girls";
+    }
     else if (line.indexOf("Mix")>=0) {
         return "Mixed";
     }
@@ -279,6 +291,9 @@ function findTeam (line, parseContext) {
     }
     else if (line.indexOf("SB")>=0) {
         return "Sharks";
+    }
+    else if (line.indexOf("CS-AD")>=0) {
+        return "Cudas";
     }
     else {
         console.log("CAN'T FIND TEAM: "+line);
